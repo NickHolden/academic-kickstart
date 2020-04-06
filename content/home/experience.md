@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
 title = "Experience"
-subtitle = "$\frac{3}{2}$"
+subtitle = ""
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
@@ -27,7 +27,7 @@ date_format = "Jan 2006"
   description = """
   Responsibilities include:
 
-  * Analysing
+  * $$\frac{3}{2}$$
   * Modelling
   * Deploying
     """
