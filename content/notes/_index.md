@@ -1,4 +1,9 @@
+---
 title: Courses
+layout: docs  # Do not modify.
 
-layout: docs
-
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+---
