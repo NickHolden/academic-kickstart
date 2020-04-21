@@ -14,5 +14,19 @@ menu:
 weight: 1
 ---
 
-strings suck lmao
+# Rabin-Karp Fingerprints
+
+## understand what Rabin-Karp fingerprints are
+
+an algorithm which takes a string and turns it into a number. we want the algorithm to be fairly complex to reduce collisions. 
+
+main point: turn a string into a number and reduce collisions
+
+## why it is useful
+
+## why we would use them
+
+## how to calculate 
+
+
 
