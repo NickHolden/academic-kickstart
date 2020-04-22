@@ -142,4 +142,3 @@ Now we can go to the right side and look at the subtree $6,3,7.$ From our post-o
 Now we look to the in-order, and see that $6$ is left and $7$ is right, so we can finish our reconstruction.
 
 ![image](/notes/eecs281/images/recon7.png)
-
