@@ -38,7 +38,7 @@ Set of edges leading from 1 vertex to another vertex. No vertex appears twice.
 
 There exists a path between every pair of vertices.
 
-![connected](/connected.png)
+![image](/notes/eecs281/images/connected.png)
 
 ### Disconnected
 
