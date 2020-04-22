@@ -127,17 +127,19 @@ In our subtree of $4,8,2,5$ we know that $2$ is going to be our root and $5$ goe
 
 ![image](/notes/eecs281/images/recon2.png)
 
-We now look at the subtree $4,8$ and see that $4$ is the root of that tree.
-
 ![image](/notes/eecs281/images/recon3.png)
+
+We now look at the subtree $4,8$ and see that $4$ is the root of that tree.
 
 ![image](/notes/eecs281/images/recon4.png)
 
+![image](/notes/eecs281/images/recon5.png)
+
 Now we can go to the right side and look at the subtree $6,3,7.$ From our post-order traversal we know that $3$ is the root.
 
-![image](/notes/eecs281/images/recon5.png)
+![image](/notes/eecs281/images/recon6.png)
 
 Now we look to the in-order, and see that $6$ is left and $7$ is right, so we can finish our reconstruction.
 
-![image](/notes/eecs281/images/recon6.png)
+![image](/notes/eecs281/images/recon7.png)
 
