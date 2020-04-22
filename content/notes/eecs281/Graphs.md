@@ -50,7 +50,7 @@ There exists a pair of vertices such that no edge connects them.
 
 A special case of a simple path, except the first and last node are the same. An example of this would be my route from home to class then back home.
 
-![image](/notes/eecs281/images/cycle.png)
+![image](/notes/eecs281/images/directed.png)
 
 ### Directed
 
