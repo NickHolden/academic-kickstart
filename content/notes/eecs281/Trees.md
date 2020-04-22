@@ -18,6 +18,10 @@ weight: 1
 
 # Tree Definitions
 
+## Balanced
+
+
+
 ## Complete
 
 ![](C:\Users\NickolasHolden\Desktop\CompleteBinary.jpg)
@@ -43,9 +47,13 @@ Preorder Traversal for above tree: 1, 2, 4, 5, 3
 
 ## In-order
 
+If the In-order is the sorted data, we know that our tree is a BST.
+
 - Visit the left subtree, parent, right subtree
 
 In-order Traversal for the above tree: 4, 2, 5, 1, 3
+
+We know that everything to the left of the root is in the left subtree and everything to the right of the node is in the right subtree.
 
 ## Post-order
 
@@ -58,6 +66,10 @@ Post-order Traversal for the above tree: 4, 5, 2, 3, 1
 Breadth-first search, uses a queue normally.
 
 Level Order Traversal for the above tree: 1, 2, 3, 4, 5
+
+### When given two of the three traversals, how do we make the tree?
+
+We will usually be given the In-order (or else it wouldn't be a unique tree)
 
 
 
