@@ -38,7 +38,7 @@ Set of edges leading from 1 vertex to another vertex. No vertex appears twice.
 
 There exists a path between every pair of vertices.
 
-<img src="images/connected.png">
+<img src="connected.png">
 
 ### Disconnected
 
@@ -50,13 +50,13 @@ There exists a pair of vertices such that no edge connects them.
 
 A special case of a simple path, except the first and last node are the same. An example of this would be my route from home to class then back home.
 
-<img src="images/cycle.png">
+<img src="cycle.png">
 
 ### Directed
 
 Vertex order of edges matter in this case. For example, if we were only able to go from home to 281 but not 281 to home, meaning that we could never skip 176 and just go home.
 
-<img src="images/directed.png">
+<img src="directed.png">
 
 ### Weighted
 
@@ -76,7 +76,7 @@ Fewer edges, generally $|E|$ is much less than $|V|^2$, or $|E| \approx |V|$
 
 ## Adjacency Matrix
 
-We can represent this <img src="images/flights.png">
+We can represent this <img src="flights.png">
 
  graph as an adjacency matrix where an entry $1$ means there is an edge between the vertices and $0$ means there is not.
 
@@ -94,7 +94,7 @@ We could also similarly make a distance matrix where we just include the distanc
 
 We could have an adjacency list of the flight graph above which basically just shows us what we can reach from a given node.
 
-<img src="images/adjlist.png">
+<img src="adjlist.png">
 
 We would have a list like this for every possible starting node.
 
