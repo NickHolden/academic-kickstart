@@ -38,25 +38,25 @@ Set of edges leading from 1 vertex to another vertex. No vertex appears twice.
 
 There exists a path between every pair of vertices.
 
-![Connected Graph](/static/connected.png)
+<img src="images/connected.png">
 
 ### Disconnected
 
 There exists a pair of vertices such that no edge connects them.
 
-![image-20200422110321567](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422110321567.png)
+<img src="images/unconnected.png">
 
 ### Cycle
 
 A special case of a simple path, except the first and last node are the same. An example of this would be my route from home to class then back home.
 
-![image-20200422110758892](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422110758892.png)
+<img src="images/cycle.png">
 
 ### Directed
 
 Vertex order of edges matter in this case. For example, if we were only able to go from home to 281 but not 281 to home, meaning that we could never skip 176 and just go home.
 
-![image-20200422110909914](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422110909914.png)
+<img src="images/directed.png">
 
 ### Weighted
 
@@ -76,7 +76,7 @@ Fewer edges, generally $|E|$ is much less than $|V|^2$, or $|E| \approx |V|$
 
 ## Adjacency Matrix
 
-We can represent this![image-20200422111718424](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422111718424.png)
+We can represent this <img src="images/flights.png">
 
  graph as an adjacency matrix where an entry $1$ means there is an edge between the vertices and $0$ means there is not.
 
@@ -94,9 +94,7 @@ We could also similarly make a distance matrix where we just include the distanc
 
 We could have an adjacency list of the flight graph above which basically just shows us what we can reach from a given node.
 
-![image-20200422112235002](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422112235002.png)
-
-
+<img src="images/adjlist.png">
 
 We would have a list like this for every possible starting node.
 
