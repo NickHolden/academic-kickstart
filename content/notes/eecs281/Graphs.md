@@ -44,19 +44,19 @@ There exists a path between every pair of vertices.
 
 There exists a pair of vertices such that no edge connects them.
 
-<img src="images/unconnected.png">
+![image](/notes/eecs281/images/disconnected.png)
 
 ### Cycle
 
 A special case of a simple path, except the first and last node are the same. An example of this would be my route from home to class then back home.
 
-<img src="cycle.png">
+![image](/notes/eecs281/images/cycle.png)
 
 ### Directed
 
 Vertex order of edges matter in this case. For example, if we were only able to go from home to 281 but not 281 to home, meaning that we could never skip 176 and just go home.
 
-<img src="directed.png">
+![image](/notes/eecs281/images/directed.png)
 
 ### Weighted
 
@@ -76,7 +76,7 @@ Fewer edges, generally $|E|$ is much less than $|V|^2$, or $|E| \approx |V|$
 
 ## Adjacency Matrix
 
-We can represent this <img src="flights.png">
+We can represent this![image](/notes/eecs281/images/flight.png)
 
  graph as an adjacency matrix where an entry $1$ means there is an edge between the vertices and $0$ means there is not.
 
@@ -94,7 +94,7 @@ We could also similarly make a distance matrix where we just include the distanc
 
 We could have an adjacency list of the flight graph above which basically just shows us what we can reach from a given node.
 
-<img src="adjlist.png">
+![image](/notes/eecs281/images/adjlist.png)
 
 We would have a list like this for every possible starting node.
 
