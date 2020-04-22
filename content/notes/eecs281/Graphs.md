@@ -16,69 +16,69 @@ weight: 1
 
 ---
 
-# Definitions
 
-## What is a graph
+
+## Definitions
+
+### What is a graph
 
 A graph $G = (V, E)$ is a set of vertices and edges.
 
 Each edge can be thought of as a tuple $e_m = (v_1, v_6)$  means that there is an edge from vertex 1 to vertex 6.
 
-## Simple Graph
+### Simple Graph
 
 Graph without parallel edges or self loops. These are the types of graphs we will be focusing on.
 
-## Simple Path
+### Simple Path
 
 Set of edges leading from 1 vertex to another vertex. No vertex appears twice.
 
-## Connected
+### Connected
 
 There exists a path between every pair of vertices.
 
-![image-20200422110447180](C:\Users\NickolasHolden\AppData\Roaming\Typora\typora-user-images\image-20200422110447180.png)
+![image-20200422110447180](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422110447180.png)
 
-
-
-## Disconnected
+### Disconnected
 
 There exists a pair of vertices such that no edge connects them.
 
-![image-20200422110321567](C:\Users\NickolasHolden\AppData\Roaming\Typora\typora-user-images\image-20200422110321567.png)
+![image-20200422110321567](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422110321567.png)
 
-## Cycle
+### Cycle
 
 A special case of a simple path, except the first and last node are the same. An example of this would be my route from home to class then back home.
 
-![image-20200422110758892](C:\Users\NickolasHolden\AppData\Roaming\Typora\typora-user-images\image-20200422110758892.png)
+![image-20200422110758892](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422110758892.png)
 
-## Directed
+### Directed
 
 Vertex order of edges matter in this case. For example, if we were only able to go from home to 281 but not 281 to home, meaning that we could never skip 176 and just go home.
 
-![image-20200422110909914](C:\Users\NickolasHolden\AppData\Roaming\Typora\typora-user-images\image-20200422110909914.png)
+![image-20200422110909914](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422110909914.png)
 
-## Weighted
+### Weighted
 
 Edges could have weights, could be the cost to travel to a node, or distance between nodes, whatever metric you want really.
 
-## Dense
+### Dense
 
 - Adjacency matrix representation usually.
 
 A dense graph has many edges, roughly $|E| \approx |V|^2$
 
-## Sparse
+### Sparse
 
 - Adjacency list representation usually.
 
 Fewer edges, generally $|E|$ is much less than $|V|^2$, or $|E| \approx |V|$
 
-# Adjacency Matrix
+## Adjacency Matrix
 
-![image-20200422111718424](C:\Users\NickolasHolden\AppData\Roaming\Typora\typora-user-images\image-20200422111718424.png)
+We can represent this![image-20200422111718424](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422111718424.png)
 
-We can represent this graph as an adjacency matrix where an entry $1$ means there is an edge between the vertices and $0$ means there is not.
+ graph as an adjacency matrix where an entry $1$ means there is an edge between the vertices and $0$ means there is not.
 
 |         | **SFO** | **DFW** | **ORD** | **JFK** | **BOS** |
 | ------- | ------- | ------- | ------- | ------- | ------- |
@@ -90,37 +90,37 @@ We can represent this graph as an adjacency matrix where an entry $1$ means ther
 
 We could also similarly make a distance matrix where we just include the distances between the vertices. So for example, in the [SFO][DFW\] entry we would have $1846$. 
 
-# Adjacency List
+### Adjacency List
 
 We could have an adjacency list of the flight graph above which basically just shows us what we can reach from a given node.
 
-![image-20200422112235002](C:\Users\NickolasHolden\AppData\Roaming\Typora\typora-user-images\image-20200422112235002.png)
+![image-20200422112235002](C:\Users\NickolasHolden\Documents\academic-kickstart\content\notes\eecs281\images\image-20200422112235002.png)
+
+
 
 We would have a list like this for every possible starting node.
 
 Note that we could also include the distance within our node structure.
 
-# Graph Algorithms
+## Graph Algorithms
 
-## Unweighted vs Weighted
+### Unweighted vs Weighted
 
-### Unweighted
+#### Unweighted
 
 Generally looking if a path in general is possible from start node to end node.
 
-### Weighted
+#### Weighted
 
 Generally looking for the least cost path from start node to end node.
 
-
-
-## Depth-first search 
+### Depth-first search
 
 Uses a stack
 
 Given a graph $G=(V,E)$, we systematically explore the edges of $G$ to discover if a path exists from our source $s$ to the goal $g$. 
 
-### Pseudocode Algorithm
+#### Pseudocode Algorithm
 
 1. Mark source as visited
 2. Push source to the stack
@@ -135,7 +135,7 @@ Given a graph $G=(V,E)$, we systematically explore the edges of $G$ to discover 
 
 Use of an adjacency list or adjacency matrix depends on our underlying graph and whether it is sparse or dense.
 
-## Breadth-first search (optimal for unweighted)
+### Breadth-first search (optimal for unweighted)
 
 Uses a queue
 
@@ -145,9 +145,9 @@ The algorithm for BFS is exactly the same as DFS except we push to the queue and
 
 Same complexity as DFS.
 
-# Complexities
+## Complexities
 
-## Adjacency List/matrix
+### Adjacency List/Matrix
 
 Access vertex: $O(1)$
 
@@ -157,9 +157,9 @@ Average cost for individual vertex: $O(1+E/V)$
 
 Cost for all vertices is $O(V) \cdot O(1+E/V) = O(V+E)$
 
-## Depth-first search
+### Depth-first search
 
-### Adjacency List
+#### Adjacency List
 
 Each vertex is pushed at most once - $O(V)$
 
@@ -167,7 +167,7 @@ Each vertex is popped at most once, then next node is visited - $O(1 + E/V)$
 
 Therefore, $O(V+E)$
 
-### Adjacency Matrix
+#### Adjacency Matrix
 
 Each vertex is pushed at most once - $O(V)$
 
@@ -175,7 +175,7 @@ For each vertex, vertex is visited at most once - $O(V)$
 
 Therefore, $O(V^2)$
 
-#### When to choose list vs matrix
+##### When to choose list vs matrix
 
 We make this decision based on what our underlying graph looks like.
 
