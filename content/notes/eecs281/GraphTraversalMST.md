@@ -17,11 +17,7 @@ weight: 1
 
 ---
 
-## Depth-first search
-
-<h2>
-    <p style ="color:red">Depth-first search</p>
-</h2>
+## <span style="color:red">Depth-first search</span>
 
 Uses a stack
 
