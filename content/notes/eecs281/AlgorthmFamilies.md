@@ -15,8 +15,6 @@ weight: 1
 
 ---
 
-# Algorithm Families
-
 | **Algorithm Family** | Notes                                                        |
 | -------------------- | ------------------------------------------------------------ |
 | Brute Force          | Guaranteed to be optimal. Very slow.                         |
