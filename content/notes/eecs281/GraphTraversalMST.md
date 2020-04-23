@@ -23,9 +23,9 @@ Uses a stack
 
 Visit the child nodes before visiting the sibling nodes. This allows us to traverse the depth of any particular path before exploring its breadth.
 
-### <span style="color:yellow">When would we want to use this?</span>
+### <span style="color:gold">When would we want to use this?</span>
 
-### <span style="color:yellow">Code example</span>
+### <span style="color:gold">Code example</span>
 
 ## <span style="color:orange">Breadth-first search</span>
 
@@ -37,9 +37,9 @@ When all edges have the same cost (e.g. unweighted graph), BFS finds the shortes
 
 More generally, if the cost of the path is non-decreasing function of the depth of the node, then BFS finds the shortest path between nodes.
 
-### <span style="color:yellow">When would we want to use this?</span>
+### <span style="color:gold">When would we want to use this?</span>
 
-### <span style="color:yellow">Code example</span>
+### <span style="color:gold">Code example</span>
 
 ## <span style="color:orange">Spanning Trees</span>
 
@@ -53,13 +53,13 @@ This would be an example of a spanning tree
 
 ![image](/notes/eecs281/images/mst2.png)
 
-### <span style="color:yellow">Minimum Spanning Tree (MST)</span>
+### <span style="color:gold">Minimum Spanning Tree (MST)</span>
 
 An MST is the spanning tree which has the lowest total cost.
 
 Important distinction between MST and regular spanning tree: the sum of the edge weights is less than any other spanning tree.
 
-### <span style="color:yellow">Example</span>
+### <span style="color:gold">Example</span>
 
 Our initial graph
 
@@ -75,7 +75,7 @@ An MST
 
 ## <span style="color:orange">Algorithms for finding spanning trees</span>
 
-### <span style="color:yellow">Prim's Algorithm (greedy)</span>
+### <span style="color:gold">Prim's Algorithm (greedy)</span>
 
 Best for **dense** graphs
 
@@ -86,13 +86,13 @@ We separate vertices into two groups:
 
 Iteratively add the nearest outie, converting it to an innie.
 
-#### <span style="color:yellow">Algorithm</span>
+#### <span style="color:gold">Algorithm</span>
 
 1. Find the closest (meaning smallest weight) out-vertex $X$
 2. Mark $X$ as "in"
 3. Update nearest for each out-vertex $Y$ that is closer to $X$ than $Y$'s old nearest.
 
-#### <span style="color:yellow">Complexity</span>
+#### <span style="color:gold">Complexity</span>
 
 | Data Structure Implementation                                | Time Complexity                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -102,7 +102,7 @@ Iteratively add the nearest outie, converting it to an innie.
 
 
 
-#### <span style="color:yellow">Example</span>
+#### <span style="color:gold">Example</span>
 
 Starting with this graph
 
@@ -164,7 +164,7 @@ We continue this process until every vertex has been included in the MST, i.e. $
 
 ![image](/notes/eecs281/images/prim2.png)
 
-### <span style="color:yellow">Kruskal's Algorithm (greedy)</span>
+### <span style="color:gold">Kruskal's Algorithm (greedy)</span>
 
 Best for **sparse** graphs.
 
@@ -174,7 +174,7 @@ Iteratively select the cheapest edge in a graph, if the edge forms a cycle, don'
 
 Continue until all vertices are part of the same set.
 
-#### <span style="color:yellow">Complexity</span>
+#### <span style="color:gold">Complexity</span>
 
 1. We sort the edges by weight in $O(E \log E)$ time.
 2. We use a disjoint-set data structure (such as union-find) to keep track of the vertices in each component.
@@ -185,7 +185,7 @@ Total time complexity is $O(E \log E)$ or $O(E \log V)$
 
 Faster in practice than Prim's with binary heap for very sparse graphs.
 
-## <span style="color:yellow">Updating MSTs</span>
+## <span style="color:gold">Updating MSTs</span>
 
 #### Case 1: Edge is in the MST and we are decreasing its weight
 
