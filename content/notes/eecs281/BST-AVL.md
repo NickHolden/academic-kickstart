@@ -68,6 +68,8 @@ It is important to try to keep trees balanced because this would make our insert
 
 ## AVL Tree (self balancing BST)
 
+![image](/notes/eecs281/images/avlrotations.png)
+
 An AVL Tree is a self-balancing BST with worst and average case search/insert/delete complexities of $O(\log n)$
 
 The AVL tree maintains balance with each insertion and deletion.
