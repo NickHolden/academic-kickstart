@@ -22,7 +22,7 @@ A hash table is an ADT of key, value pairs. Think of a dictionary where the keys
 - $O(1)$ amortized average case **insertion, removal, **and **lookup**
 - Good when we have a lot of distinct keys
 
-### Good use examples
+### <span style="color:gold"> Good use examples</span>
 
 - Storing U of M students in a hash table with the key being their UMID.
 
@@ -30,9 +30,9 @@ A hash table is an ADT of key, value pairs. Think of a dictionary where the keys
 
 - Doing lots of $<, >$ queries on data
 - When the load factor is high
-  - **Load factor: **$\frac{N}{M}$ where $N$ is the number of keys and $M$ is the table size.
+  - Load factor: $\frac{N}{M}$ where $N$ is the number of keys and $M$ is the table size.
 
-#### Bad use examples
+#### <span style="color:gold">Bad use examples</span>
 
 - Anything where we need a relation between data, like $k_1$ < $k_2$. 
   - We would rather use a binary search tree for this.
@@ -61,14 +61,14 @@ Note that when resolving collisions with $i$, we need to increment $i$ every tim
 
 
 
-### Linear Probing
+### <span style="color:gold">Linear Probing</span>
 
 - $T(k) = (T(k) + i)$ $\mod M$ for $i = 0, 1, 2, 3, 4, ...$
 
 1. Use a hash function to find the index for a key.
 2. If that spot already contains a value, use the next available spot (move right). If the end of the array is reached, loop back to the beginning.
 
-#### Example - Insert the following numbers into a hash table of size $5$ using the hash function $H(key) = key \mod 5$
+#### <span style="color:yellow">Example - Insert the following numbers into a hash table of size $5$ using the hash function $H(key) = key \mod 5$</span>
 
 $10,11,12,15$
 
@@ -94,11 +94,11 @@ We can see that the $0$ index is full, so we need to continue moving right until
 | ---- | ---- | ---- | ---- | ---- |
 | $10$ | $11$ | $12$ | $15$ |      |
 
-### Quadratic Probing
+### <span style="color:gold">Quadratic Probing</span>
 
 - $T(k) = (T(k) + i^2) \mod M$ for $i = 0, 1, 2, 3, 4, ...$
 
-#### Example - Insert the following numbers into a hash table of size $7$ using the hash function $H(key)=key \mod 7$
+#### <span style="color:yellow">Example - Insert the following numbers into a hash table of size $7$ using the hash function $H(key)=key \mod 7$</span>
 
 $76,40,48,5,20$
 
@@ -146,14 +146,16 @@ Finally, we will need to quadratic probe our last value up until $i=2$ giving us
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | $48$ |      | $5$  | $20$ |      | $40$ | $76$ |
 
-### Double Hashing (less likely to show up on the exam)
+### <span style="color:gold">Double Hashing (less likely to show up on the exam)</span>
 
 In double hashing we basically use the $T(k)$ hash function starting with $i=0$ and on our first collision we increase $i.$
 
 - $T(k) = (T(k) + i \cdot T'(k)) \mod M$ for $i = 0, 1,2,3,4,...$
 - $T'(k) = q - (T(k) \mod q)$ where $q$ is prime and $q < M$ where $M$ is the table size.
 
-#### Example - Insert the following key, value pairs using double hashing where $q=5.$ Use the first character in the string for your hash value.
+#### <span style="color:yellow">Example - Insert the following key, value pairs using double hashing where $q=5.$ Use the first character in the string for your hash value.</span>
+
+
 
 1. banana, yellow
 2. blueberry, blue
@@ -200,7 +202,7 @@ We can fill in the rest of our table in the same way, giving us a final table of
 
 Time complexities for **insertion/search.**
 
-### Separate Chaining
+### <span style="color:gold">Separate Chaining</span>
 
 - Best: $O(1)$
 - Worst: $O(n)$
@@ -208,7 +210,7 @@ Time complexities for **insertion/search.**
 - Average: $O(n/m)$
 - Amortized $O(1)$
 
-### Linear Probing
+### <span style="color:gold">Linear Probing</span>
 
 - Best: $O(1)$
 - Worst: $O(n)$

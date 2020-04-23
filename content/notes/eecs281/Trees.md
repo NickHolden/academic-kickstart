@@ -17,35 +17,37 @@ weight: 1
 
 ---
 
-## Tree Definitions / Terminology
+## <span style="color:orange"> Definitions and Terminology</span>
 
-### Root
+### <span style="color:gold">Root</span>
 
 Node with no parents.
 
-### Leaf
+### <span style="color:gold">Leaf</span>
 
 Node with no children
 
-### Internal Node
+### <span style="color:gold">Internal Node</span>
 
 Node with children (including the root).
 
-### Depth
+### <span style="color:gold">Depth</span>
 
 Distance from a node to the root.
 
-### Height
+### <span style="color:gold">Height</span>
 
 Distance from a node to the lowest leaf node
 
-### Siblings
+### <span style="color:gold">Siblings</span>
 
 Nodes with the same parent node
 
-### Balanced
+### <span style="color:gold">Balanced</span>
 
-### Complete
+The difference between heights of the left subtree and right subtree is not more than $1.$
+
+### <span style="color:gold">Complete</span>
 
 ![image](/notes/eecs281/images/CompleteBinary.jpg)
 
@@ -53,19 +55,19 @@ All levels are filled (except possibly the last) and all nodes in the last level
 
 A complete tree is not binary, but the binary heap is a complete tree.
 
-### Full / Proper
+### <span style="color:gold">Full / Proper</span>
 
 ![image](/notes/eecs281/images/FullBinary.jpg)
 
 Every node either exactly $2$ or $0$ children.
 
-## Traversals
+## <span style="color:orange">Traversals</span>
 
 ![image](/notes/eecs281/images/tree12.gif)
 
 Let P = Parent, L = Left Child, R = Right Child.
 
-### Pre-order
+### <span style="color:gold">Pre-order</span>
 
 Explore all nodes first - top-down recursion.
 
@@ -73,7 +75,7 @@ Traversal Order: PLR
 
 Pre-order traversal for the above tree: $1,2,4,5,3$
 
-### In-order
+### <span style="color:gold">In-order</span>
 
 Flattens back to original insertion sequence.
 
@@ -85,7 +87,7 @@ If the In-order traversal is the sorted data, then we know the tree is a BST.
 
 In-order traversal for the above tree: $4,2,5,1,3$
 
-### Post-order
+### <span style="color:gold">Post-order</span>
 
 Explore all leaves first - bottom-up recursion.
 
@@ -93,15 +95,15 @@ Traversal Order: LRP
 
 Post-order traversal for the above tree: $4,5,2,3,1$
 
-### Level-order
+### <span style="color:gold">Level-order</span>
 
 This is a Breadth-first search. Traverse all nodes of a level starting at the root and traverse left to right.
 
 Level-order traversal for the above tree: $1,2,3,4,5$
 
-## Tree Reconstruction
+## <span style="color:orange">Tree Reconstruction</span>
 
-### Solving
+### <span style="color:gold">Solving</span>
 
 We need to take a look at the post-order or the pre-order traversal. Our root note is going to be the first element of the pre-order and last element in the post order.
 
@@ -109,7 +111,7 @@ From here, we can use the In-order traversal to recreate our tree because we kno
 
 Now, we take the left subtree's elements from the in-order/pre-order traversal and look at the post order to determine the root of that subtree. We keep doing this recursively until we have reconstructed the tree.
 
-### Example
+### <span style="color:gold">Example</span>
 
 Given the following traversals, draw a tree that would match the traversal results.
 
