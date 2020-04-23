@@ -20,6 +20,10 @@ weight: 1
 
 ## Definitions
 
+### Sparse vs Dense vs Complete
+
+![image](/notes/eecs281/images/graphexamples.png)
+
 ### What is a graph
 
 A graph $G = (V, E)$ is a set of vertices and edges.
