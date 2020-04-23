@@ -1,5 +1,5 @@
 ---
-title: Algorithim Families
+title: Algorithm Families
 linktitle: Algorithm Families
 toc: true
 type: docs
@@ -14,6 +14,8 @@ menu:
 weight: 1
 
 ---
+
+# Algorithm Families
 
 | **Algorithm Family** | Notes                                                        |
 | -------------------- | ------------------------------------------------------------ |
