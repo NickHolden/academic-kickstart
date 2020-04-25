@@ -15,8 +15,6 @@ weight: 1
 
 ---
 
-## What is a BST
-
 A binary search tree is a tree such that the key of any node is:
 
 -  $>$ the keys of all nodes in its left subtree

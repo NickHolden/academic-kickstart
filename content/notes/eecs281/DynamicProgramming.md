@@ -72,5 +72,9 @@ int fib(int n, vector<int>& v) {
 
 Our top-down approach has reduced our solution from $O(2^n)$ to $O(n)$.
 
+### <span style="color:gold">Bottom-up approach (Iterative)</span>
 
+## Finding path in maze
+
+Assume that we have $n \times n$ grid and we can only 
 
