@@ -25,7 +25,7 @@ Visit the child nodes before visiting the sibling nodes. This allows us to trave
 
 ### <span style="yellow">When would we want to use this?</span>
 
-### <span style="color:yellow">Code example</span>
+### <span style="color:gold">Code example</span>
 
 ## <span style="color:orange">Breadth-first search</span>
 
@@ -37,9 +37,9 @@ When all edges have the same cost (e.g. unweighted graph), BFS finds the shortes
 
 More generally, if the cost of the path is non-decreasing function of the depth of the node, then BFS finds the shortest path between nodes.
 
-### <span style="color:yellow">When would we want to use this?</span>
+### <span style="color:gold">When would we want to use this?</span>
 
-### <span style="color:yellow">Code example</span>
+### <span style="color:gold">Code example</span>
 
 ## <span style="color:orange">Spanning Trees</span>
 
@@ -53,13 +53,13 @@ This would be an example of a spanning tree
 
 ![image](/notes/eecs281/images/mst2.png)
 
-### <span style="color:yellow">Minimum Spanning Tree (MST)</span>
+### <span style="color:gold">Minimum Spanning Tree (MST)</span>
 
 An MST is the spanning tree which has the lowest total cost.
 
 Important distinction between MST and regular spanning tree: the sum of the edge weights is less than any other spanning tree.
 
-### <span style="color:yellow">Example</span>
+### <span style="color:gold">Example</span>
 
 Our initial graph
 
@@ -75,7 +75,7 @@ An MST
 
 ## <span style="color:orange">Algorithms for finding spanning trees</span>
 
-### <span style="color:yellow">Prim's Algorithm (greedy)</span>
+### <span style="color:gold">Prim's Algorithm (greedy)</span>
 
 Best for **dense** graphs
 
@@ -92,7 +92,7 @@ Iteratively add the nearest outie, converting it to an innie.
 2. Mark $X$ as "in"
 3. Update nearest for each out-vertex $Y$ that is closer to $X$ than $Y$'s old nearest.
 
-#### <span style="color:yellow">Complexity</span>
+#### <span style="color:gold">Complexity</span>
 
 | Data Structure Implementation                                | Time Complexity                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -102,7 +102,7 @@ Iteratively add the nearest outie, converting it to an innie.
 
 
 
-#### <span style="color:yellow">Example</span>
+#### <span style="color:color:gold">Example</span>
 
 Starting with this graph
 
@@ -164,7 +164,7 @@ We continue this process until every vertex has been included in the MST, i.e. $
 
 ![image](/notes/eecs281/images/prim2.png)
 
-### <span style="color:yellow">Kruskal's Algorithm (greedy)</span>
+### <span style="color:gold">Kruskal's Algorithm (greedy)</span>
 
 Best for **sparse** graphs.
 
@@ -174,7 +174,7 @@ Iteratively select the cheapest edge in a graph, if the edge forms a cycle, don'
 
 Continue until all vertices are part of the same set.
 
-#### <span style="color:yellow">Complexity</span>
+#### <span style="color:gold">Complexity</span>
 
 1. We sort the edges by weight in $O(E \log E)$ time.
 2. We use a disjoint-set data structure (such as union-find) to keep track of the vertices in each component.
@@ -185,7 +185,55 @@ Total time complexity is $O(E \log E)$ or $O(E \log V)$
 
 Faster in practice than Prim's with binary heap for very sparse graphs.
 
-## <span style="color:yellow">Updating MSTs</span>
+### <span style="color:gold"> Dijkstra's Algorithm </span>
+
+![image](/notes/eecs281/images/da1.png)
+
+Dijkstra's Algorithm is very similar to Prim's except we keep track of the cumulative distance to each node. 
+
+| Vertex | Visited | Distance from Start | Previous Vertex |
+| ------ | ------- | ------------------- | --------------- |
+| A      | F       | 0                   |                 |
+| B      | F       | $\infty$            |                 |
+| C      | F       | $\infty$            |                 |
+| D      | F       | $\infty$            |                 |
+| E      | F       | $\infty$            |                 |
+
+We find the smallest unvisited vertex, which is going to be in this case. We then update the distance of the neighbors of A, then mark A true.
+
+| Vertex | Visited | Distance from Start | Previous Vertex |
+| ------ | ------- | ------------------- | --------------- |
+| A      | T       | $0$                 |                 |
+| B      | F       | 6                   | A               |
+| C      | F       | $\infty$            |                 |
+| D      | F       | 1                   | A               |
+| E      | F       | $\infty$            |                 |
+
+Now we find the smallest unvisited vertex, which is D. Now we need to look at the unvisited neighbors of D and add their edges, along with the distance from the start. If this distance is smaller than what is already known, we update the distance and previous vertex.
+
+| Vertex | Visited | Distance from Start | Previous Vertex |
+| ------ | ------- | ------------------- | --------------- |
+| A      | T       | $0$                 |                 |
+| B      | F       | $3$                 | D               |
+| C      | F       | $\infty$            |                 |
+| D      | T       | $1$                 | A               |
+| E      | F       | $2$                 | D               |
+
+We continue this process until we finish the table.
+
+| Vertex | Visited | Distance from Start | Previous Vertex |
+| ------ | ------- | ------------------- | --------------- |
+| A      | T       | $0$                 |                 |
+| B      | T       | $3$                 | D               |
+| C      | T       | $7$                 | E               |
+| D      | T       | $1$                 | A               |
+| E      | T       | $2$                 | D               |
+
+This is what our shortest path looks like:
+
+![image](/notes/eecs281/images/da2.png)
+
+## <span style="color:orange">Updating MSTs</span>
 
 #### Case 1: Edge is in the MST and we are decreasing its weight
 

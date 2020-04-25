@@ -28,6 +28,8 @@ weight: 1
 
 Tries every possible combination and then uses the best one.
 
+Guaranteed to be **optimal** but usually inefficient.
+
 ### <span style="color:gold">Example - Guessing an ATM Pin</span>
 
 Assuming a $4$ digit pin, we would brute force the "solution" (i.e. get into their bank account) by trying every pin combination, so we would guess $0000, 0001, 0002, ... , 9998, 9999$ and pick the one that worked. In the worst case, it would take $10^4$ tries to crack.
@@ -38,11 +40,16 @@ Assuming a $4$ digit pin, we would brute force the "solution" (i.e. get into the
 
 Picks the next best choice, not guaranteed to be the optimal solution. 
 
+Never reconsiders decisions.
+
 ### <span style="color:gold">Common greedy algorithms</span>
 
 - Prim's Algorithm
 - Kruskal's Algorithm
+- Dijkstra's Algorithm
 - Selection Sort
+- Bubble Sort
+- Insertion Sort
 
 ### <span style="color:gold">Example -  Fallout: New Vegas Knapsack Problem</span>
 
@@ -63,6 +70,8 @@ We can see that this is a solution, but it is not an optimal solution because we
 
 ## <span style="color:orange">Divide and Conquer</span>
 
+Non-overlapping sub-problems
+
 1. Divide: Break a problem into subproblems of the same type
 2. Conquer: Recursively solve these subproblems
 3. Combine: Combine the answers
@@ -78,13 +87,23 @@ We can see that this is a solution, but it is not an optimal solution because we
 
 ## <span style="color:orange">Backtracking</span>
 
+Same asymptotic complexity as brute force, but in practice it is usually a lot faster because of pruning.
+
 This is used to figure out if a certain constraint can be satisfied.
 
 We used backtracking in Project 1 to see if we could reach the goal from a given starting location.
 
+- Systematically check all possible solutions.
+- Prune those that don't satisfy constraints (e.g. dead end in a maze).
+- Stop when the constraints are satisfied.
+
 ## <span style="color:orange">Branch and Bound</span>
 
 We used this in Project 4 part C to quickly prune solutions that we knew wouldn't lead to an optimal solution.
+
+- This is very similar to backtracking, except we have more constraints for optimization. 
+- We cannot stop early.
+- This can be used for minimization and maximization
 
 ### <span style="color:gold">Pseudocode</span>
 
@@ -117,3 +136,20 @@ If either of these are violated, the bounds are invalid. For the case of the upp
 ## <span style="color:orange">Dynamic Programming </span>
 
 Trades memory for speed by **remembering the answer to every subproblem** for overlapping subproblems.
+
+- Divide into multiple **overlapping** sub-problems
+- Remember partial solutions and reuse them in the future
+- "Memoization"
+
+### Top Down (Recursive)
+
+- Save known values as they are calculated
+- This is generally preferred because
+  - Mechanical transformation of natural recursive problem solution
+  - order of computing subproblems takes care of itself
+  - may not need to compute answers to all subproblems
+- Adaptive
+  - only compute needed subcases
+
+### Bottom Up (Iterative)
+
