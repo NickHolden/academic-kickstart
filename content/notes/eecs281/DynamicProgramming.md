@@ -20,9 +20,9 @@ Dynamic programming is a way to trade memory for speed by remembering the answer
 
 We can only use DP when we have **overlapping** sub-problems.
 
-## Fibonacci
+## <span style="color:orange">Fibonacci</span>
 
-### Non-DP Approach
+### <span style="color:gold">Non-DP Approach</span>
 
 We can solve Fibonacci recursively with an $O(2^n)$ runtime
 
@@ -41,11 +41,11 @@ This solution works. However, it takes a lot more time than is necessary because
 
 Say we were wanting to call fib(6). In order to solve fib(6) we need to call fib(5) and fib(4). Notice how on the left side of our call stack we are recalculating smaller fib values multiple times. 
 
-
+![image](/notes/eecs281/images/fib1.png)
 
 We can cut out these needless calculations by using DP, storing previously calculated fib values.
 
-### Top-down approach (Recursion)
+### <span style="color:gold">Top-down approach (Recursion)</span>
 
 When using a top-down approach for dynamic programming:
 
