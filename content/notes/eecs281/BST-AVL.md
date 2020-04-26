@@ -18,15 +18,15 @@ weight: 1
 A binary search tree is a tree such that the key of any node is:
 
 -  $>$ the keys of all nodes in its left subtree
-- <= the keys of all nodes in its right subtree
+- $\leq$  the keys of all nodes in its right subtree
 
 We use BSTs because they are very efficient to search and insert.
 
-### Inserting
+### <span style="color:gold">Inserting</span>
 
 Start at the root and traverse downwards (based on the node's value) until a spot to append the node is found.
 
-### Deletion
+### <span style="color:gold">Deletion</span>
 
 Three cases: Node has $1$ child, $2$ children, $0$ children.
 
@@ -36,7 +36,7 @@ $1$ child: replace the node with its child and delete the child
 
 $2$ children: replace with its in-order successor (or predecessor) and remove the in-order node from its original spot in the tree and replace it with its child if it has one.
 
-#### Example
+### <span style="color:gold">Example</span>
 
 ![image](/notes/eecs281/images/del1.png)
 
@@ -58,13 +58,13 @@ Deleting $11:$ No children, so we can just delete it.
 
 ![image](/notes/eecs281/images/del5.png)
 
-## Balancing
+## <span style="color:orange">Balancing</span>
 
 A BST $T$ is balanced if for every node $k$ of $T$, the heights of the children of $k$ differ by at most $1.$
 
 It is important to try to keep trees balanced because this would make our insert and search complexities $O(\log n)$ because we will never have a stick-like tree.
 
-## AVL Tree (self balancing BST)
+## <span style="color:orange">AVL Tree (self balancing BST)</span>
 
 ![image](/notes/eecs281/images/avlrotations.png)
 
@@ -72,13 +72,13 @@ An AVL Tree is a self-balancing BST with worst and average case search/insert/de
 
 The AVL tree maintains balance with each insertion and deletion.
 
-### AVL Invariants
+### <span style="color:gold">AVL Invariants</span>
 
 - Is a BST
 - Balance factor must be in the range $[-1, 1]$
   - $Balance factor(node) = Height(left subtree) - Height(right subtree)$
 
-### Cases for Balancing (rotation)
+### <span style="color:gold">Cases for Balancing (rotation)</span>
 
 There are $4$ different common cases for rotations. 
 
@@ -136,9 +136,9 @@ Finally, we need to make $4$'s previous left child, $3,$ the right child of it's
 
 
 
-## Complexities for non-self balancing BST
+## <span style="color:orange">Complexities for non-self balancing BST</span>
 
-### Insertion / Lookup
+### <span style="color:gold">Insertion / Lookup</span>
 
 Best case: $O(1)$ (root node)
 
@@ -146,7 +146,7 @@ Worst case: $O(n)$ (stick-like)
 
 Average case: $O(\log n)$ (binary search)
 
-### Deletion
+### <span style="color:gold">Deletion</span>
 
 Worst case: $O(n)$
 

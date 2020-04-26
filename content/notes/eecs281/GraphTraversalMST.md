@@ -23,10 +23,6 @@ Uses a stack
 
 Visit the child nodes before visiting the sibling nodes. This allows us to traverse the depth of any particular path before exploring its breadth.
 
-### <span style="yellow">When would we want to use this?</span>
-
-### <span style="color:gold">Code example</span>
-
 ## <span style="color:orange">Breadth-first search</span>
 
 Uses a queue
@@ -36,10 +32,6 @@ Visits the sibling nodes before visiting the child nodes
 When all edges have the same cost (e.g. unweighted graph), BFS finds the shortest path between nodes.
 
 More generally, if the cost of the path is non-decreasing function of the depth of the node, then BFS finds the shortest path between nodes.
-
-### <span style="color:gold">When would we want to use this?</span>
-
-### <span style="color:gold">Code example</span>
 
 ## <span style="color:orange">Spanning Trees</span>
 

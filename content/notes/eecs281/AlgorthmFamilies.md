@@ -83,7 +83,7 @@ Non-overlapping sub-problems
 - Merge Sort
 - Closest Pair of Points
 
-### <span style="color:gold">Example - </span>
+### <span style="color:gold">Example </span>
 
 ## <span style="color:orange">Backtracking</span>
 
@@ -141,7 +141,7 @@ Trades memory for speed by **remembering the answer to every subproblem** for ov
 - Remember partial solutions and reuse them in the future
 - "Memoization"
 
-### Top Down (Recursive)
+### <span style="color:gold">Top Down (Recursive)</span>
 
 - Save known values as they are calculated
 - This is generally preferred because
@@ -151,5 +151,7 @@ Trades memory for speed by **remembering the answer to every subproblem** for ov
 - Adaptive
   - only compute needed subcases
 
-### Bottom Up (Iterative)
+### <span style="color:gold">Bottom Up (Iterative)</span>
+
+- Start at the bottom base case and build up solution one by one until the solution for the later case is completed
 

@@ -18,67 +18,67 @@ weight: 1
 
 
 
-## Definitions
+## <span style="color:orange">Definitions</span>
 
-### Sparse vs Dense vs Complete
+### <span style="color:gold">Sparse vs Dense vs Complete</span>
 
 ![image](/notes/eecs281/images/graphexamples.png)
 
-### What is a graph
+### <span style="color:gold">What is a graph</span>
 
 A graph $G = (V, E)$ is a set of vertices and edges.
 
 Each edge can be thought of as a tuple $e_m = (v_1, v_6)$  means that there is an edge from vertex 1 to vertex 6.
 
-### Simple Graph
+### <span style="color:gold">Simple Graph</span>
 
 Graph without parallel edges or self loops. These are the types of graphs we will be focusing on.
 
-### Simple Path
+### <span style="color:gold">Simple Path</span>
 
 Set of edges leading from 1 vertex to another vertex. No vertex appears twice.
 
-### Connected
+### <span style="color:gold">Connected</span>
 
 There exists a path between every pair of vertices.
 
 ![image](/notes/eecs281/images/connected.png)
 
-### Disconnected
+### <span style="color:gold">Disconnected</span>
 
 There exists a pair of vertices such that no edge connects them.
 
 ![image](/notes/eecs281/images/disconnected.png)
 
-### Cycle
+### <span style="color:gold">Cycle</span>
 
 A special case of a simple path, except the first and last node are the same. An example of this would be my route from home to class then back home.
 
 ![image](/notes/eecs281/images/directed.png)
 
-### Directed
+### <span style="color:gold">Directed</span>
 
 Vertex order of edges matter in this case. For example, if we were only able to go from home to 281 but not 281 to home, meaning that we could never skip 176 and just go home.
 
 ![image](/notes/eecs281/images/directed.png)
 
-### Weighted
+### <span style="color:gold">Weighted</span>
 
 Edges could have weights, could be the cost to travel to a node, or distance between nodes, whatever metric you want really.
 
-### Dense
+### <span style="color:gold">Dense</span>
 
 - Adjacency matrix representation usually.
 
 A dense graph has many edges, roughly $|E| \approx |V|^2$
 
-### Sparse
+### <span style="color:gold">Sparse</span>
 
 - Adjacency list representation usually.
 
 Fewer edges, generally $|E|$ is much less than $|V|^2$, or $|E| \approx |V|$
 
-## Adjacency Matrix
+## <span style="color:orange">Adjacency Matrix</span>
 
 We can represent this![image](/notes/eecs281/images/flight.png)
 
@@ -94,7 +94,7 @@ We can represent this![image](/notes/eecs281/images/flight.png)
 
 We could also similarly make a distance matrix where we just include the distances between the vertices. So for example, in the [SFO][DFW\] entry we would have $1846$. 
 
-### Adjacency List
+### <span style="color:gold">Adjacency List</span>
 
 We could have an adjacency list of the flight graph above which basically just shows us what we can reach from a given node.
 
@@ -104,9 +104,9 @@ We would have a list like this for every possible starting node.
 
 Note that we could also include the distance within our node structure.
 
-## Graph Algorithms
+## <span style="color:orange">Graph Algorithms</span>
 
-### Unweighted vs Weighted
+### <span style="color:gold">Unweighted vs Weighted</span>
 
 #### Unweighted
 
@@ -116,7 +116,7 @@ Generally looking if a path in general is possible from start node to end node.
 
 Generally looking for the least cost path from start node to end node.
 
-### Depth-first search
+### <span style="color:gold">Depth-first search</span>
 
 Uses a stack
 
@@ -137,7 +137,7 @@ Given a graph $G=(V,E)$, we systematically explore the edges of $G$ to discover 
 
 Use of an adjacency list or adjacency matrix depends on our underlying graph and whether it is sparse or dense.
 
-### Breadth-first search (optimal for unweighted)
+### <span style="color:gold">Breadth-first search (optimal for unweighted)</span>
 
 Uses a queue
 
@@ -147,7 +147,7 @@ The algorithm for BFS is exactly the same as DFS except we push to the queue and
 
 Same complexity as DFS.
 
-## Complexities
+## <span style="color:orange">Complexities</span>
 
 ### Adjacency List/Matrix
 
@@ -159,7 +159,7 @@ Average cost for individual vertex: $O(1+E/V)$
 
 Cost for all vertices is $O(V) \cdot O(1+E/V) = O(V+E)$
 
-### Depth-first search
+### <span style="color:gold">Depth-first search</span>
 
 #### Adjacency List
 

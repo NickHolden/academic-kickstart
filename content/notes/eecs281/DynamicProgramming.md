@@ -20,6 +20,24 @@ Dynamic programming is a way to trade memory for speed by remembering the answer
 
 We can only use DP when we have **overlapping** sub-problems.
 
+## <span style="color:orange">Top Down Approach</span>
+
+Recursive Approach
+
+1. Check if we already have the value needed
+2. If true, return it
+3. Else, calculate it, store the result, then return the result.
+
+## <span style="color:orange">Bottom Up Approach</span>
+
+Iterative Approach
+
+1. Start with the base case
+2. Build up array/map from base case
+3. Stop when you get to the value you are trying to compute
+
+
+
 ## <span style="color:orange">Fibonacci</span>
 
 ### <span style="color:gold">Non-DP Approach</span>
@@ -74,7 +92,19 @@ Our top-down approach has reduced our solution from $O(2^n)$ to $O(n)$.
 
 ### <span style="color:gold">Bottom-up approach (Iterative)</span>
 
-## Finding path in maze
-
-Assume that we have $n \times n$ grid and we can only 
+```c++
+int fib(int n) {
+	// Init our vector with enough space
+	vector<int> v(n + 1);
+	// Put our base cases into the vector
+	v[0] = 0;
+	v[1] = 1;
+	// Now we do the loop from the bottom up.
+	for (int i = 2; i <= n; i++) {
+		v[i] = v[i - 1] + v[i - 2];
+	}
+	// Return the nth fibonacci number
+	return v[n];
+}
+```
 
