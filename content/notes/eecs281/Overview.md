@@ -33,3 +33,4 @@ https://algorithmsandme.com/count-all-possible-paths-in-maze/
 
 https://algorithms.tutorialhorizon.com/dynamic-programming-count-all-paths-in-2d-matrix-with-obstructions-in-it/
 
+https://medium.com/@codingfreak/maze-problems-in-data-structures-8530af4d6c8
