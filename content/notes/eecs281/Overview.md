@@ -30,3 +30,6 @@ https://www.geeksforgeeks.org/print-all-k-sum-levels-in-a-binary-tree/?ref=rp
 ## S
 
 https://algorithmsandme.com/count-all-possible-paths-in-maze/
+
+https://algorithms.tutorialhorizon.com/dynamic-programming-count-all-paths-in-2d-matrix-with-obstructions-in-it/
+
