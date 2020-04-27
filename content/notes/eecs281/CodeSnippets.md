@@ -110,5 +110,37 @@ void Graph::DFS(int s)
 } 
 ```
 
+## Finding if node exists 
+
+### Recursive Solution
+
+```c++
+bool exists(Node* node, int val) {
+    if (node == nullptr) return false;
+    if (node->val == val) return true;
+    if (val < node->val) {
+        return exists(node->left, val);
+    }
+    else {
+        return exists(node->right, val);
+    }
+    return false
+}
+```
+
+### Iterative Solution
+
+```c++
+bool exists(Node* node, int val) {
+    Node* current_node = node;
+    while (current_node != nullptr) {
+        if (val == current_node->val) return true;
+        if (val < current_node->val) current_node = current_node->left;
+        else current_node = current_node->right;
+    }
+    return false;
+}
+```
+
 
 
