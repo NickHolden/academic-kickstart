@@ -20,6 +20,8 @@ https://en.wikipedia.org/wiki/Software_testing
 
 Testing cannot guarantee that a program works in all cases, just that it works in specific cases. It is impossible to test every possible case in a non-trivial program.
 
+Testing is expensive, roughly 35% of total IT testing.
+
 ## Test Oracles
 
 Ways to determine whether a test passed or failed. Not always necessarily an assertion on solely the expected outcome.
