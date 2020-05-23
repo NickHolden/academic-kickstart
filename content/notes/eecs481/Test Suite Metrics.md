@@ -1,6 +1,6 @@
 ---
-title: LECTURE - Test Suite Quality Metrics
-linktitle: Test Suite Quality Metrics
+title: Test Suite Quality Metrics
+linktitle: LECTURE - Test Suite Quality Metrics
 toc: true
 type: docs
 date: "2019-05-05T00:00:00+01:00"
