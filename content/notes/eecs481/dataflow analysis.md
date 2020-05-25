@@ -29,7 +29,7 @@ $\bot$ - I have not visited this location yet.
 
 $c$ - I definitively know the value of this variable.
 
-# Transfer Functions
+## Transfer Functions
 
 We use transfer functions to transfer a property from one statement to the the next.
 
@@ -41,9 +41,9 @@ $C_{in}(x, s)$ = the value of $x$ before $s$.
 
 $C_{out}(x,s)$ = the value of $x$ after $s$.
 
-# Types of Dataflow Analysis
+## Types of Dataflow Analysis
 
-## Forward Analysis
+### Forward Analysis
 
 - Constant Propagation
 - Constant Folding
@@ -54,9 +54,9 @@ Input: the value of the property before a statement
 
 Output: the value of the property after a statement
 
-### Rules
+#### Rules
 
-#### Rule 1
+##### Rule 1
 
 ![image](/notes/eecs481/images/dfa1.png)
 
@@ -64,7 +64,7 @@ If we don't know anything about $x$ prior to the statement and $x$ is assigned t
 
 $C_{out}(x, x := c) = c$ if $c$ is a constant
 
-#### Rule 2
+##### Rule 2
 
 ![image](/notes/eecs481/images/dfa2.png)
 
@@ -72,7 +72,7 @@ If we haven't reached $x$ prior the the statement and the statement doesn't assi
 
 $C_{out}(x,s) = \bot$ if $C_{in}(x,s) = \bot$
 
-#### Rule 3
+##### Rule 3
 
 ![image](/notes/eecs481/images/dfa3.png)
 
@@ -80,7 +80,7 @@ If we don't know anything about $x$ prior to the statement and $x$ is assigned t
 
 $C_{out}(x, x:=f(...)) = \top$
 
-#### Rule 4
+##### Rule 4
 
 ![image](/notes/eecs481/images/dfa4.png)
 
@@ -92,7 +92,7 @@ $C_{out}(x, y:=...) = C_{in}(x,y:=...) \text{ if } x \neq y)$
 
 Now we can move on to the rules for when there are multiple paths $p_i$ coming in to a single statement.
 
-#### Rule 5
+##### Rule 5
 
 ![image](/notes/eecs481/images/dfa5.png)
 
@@ -100,7 +100,7 @@ If at least one of the paths are visited but we still don't know anything about 
 
 If $C_{out}(x,p_i)=\top$ for some $i$, then $C_{in}(x,s) = \top$
 
-#### Rule 6
+##### Rule 6
 
 ![image](/notes/eecs481/images/dfa6.png)
 
@@ -108,7 +108,7 @@ If we have multiple paths such that $x$ is a constant and two of those are diffe
 
 If $C_{out}(x,p_i)=c$ and $C_{out}(x,p_j)=d$ and $d \neq c$, then $C_{in}(x,s) = \top$
 
-#### Rule 7
+##### Rule 7
 
 ![image](/notes/eecs481/images/dfa7.png)
 
@@ -116,7 +116,7 @@ If $x=c$ for at least one path and the other paths are also all $c$ or unvisited
 
 If $C_{out}(x, p_i)=c$ or $\bot$ for all $i$, then $C_{in}(x,s)=c$
 
-#### Rule 8
+##### Rule 8
 
 ![image](/notes/eecs481/images/dfa8.png)
 
