@@ -1,6 +1,6 @@
 ---
-title: LECTURE - Dynamic Analysis Tools
-linktitle: Dynamic Analysis
+title: Dynamic Analysis Tools
+linktitle: LECTURE - Dynamic Analysis
 toc: true
 type: docs
 date: "2019-05-05T00:00:00+01:00"
@@ -87,3 +87,22 @@ Mechanism for **learning** about problem from the information
 **Input**: Test input data that was generated.
 
 **Learning**: Postprocess, discard duplicates and divide the observed number by the total number.
+
+
+
+Dynamic analysis is very input dependent. This is good when we have many tests. 
+
+
+
+## Eraser
+
+### Lockset Algorithm
+
+Each shared variable must be guarded by a lock for the whole computation.
+
+- Start with all locks could possibly protect v
+- If you observe that the lock i is not held when you access v, remove lock i from the set of locks that could possibly guard v
+- If the set of locks that could possibly guard v is ever empty, then no lock can guard v, so you can have a race condition.
+
+### False Alarms
+
