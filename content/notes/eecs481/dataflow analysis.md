@@ -130,3 +130,13 @@ If $C_{out}(x,p_i)=\bot$ for all $i$, then $C_{in}(x,s) = \bot$
 - Secure Information Flow
 
 Backwards analysis transfers data from right after a statement to right before a statement. On every path of execution we want to determine if a variable thats used is unsafe.
+
+### Live Variable Analysis
+
+Start at the end of the program and work backwards. When a variable is used before it is assigned, that variable then becomes live. We track live variables in a set. When a variable is assigned, we can remove it from our set.
+
+#### Example
+
+![image](/notes/eecs481/images/live.png)
+
+Notice that we have two endpoints. We can start at either endpoint.
