@@ -1,20 +1,4 @@
----
-title: Vocab Cheat Sheet
-linktitle: Vocab Cheat Sheet
-toc: true
-type: docs
-date: "2019-05-05T00:00:00+01:00"
-draft: false
-menu:
-  481:
-    parent: QA
-    weight: 1
-
-# Prev/next pager order (if `docs_section_pager` enabled in `params.toml`)
-# weight: 1
----
-
-## Software Process Narrative
+##  
 
 ### A/B Testing
 
@@ -35,10 +19,6 @@ Type of profiler / A report that explains time taken by each procedure (or funct
 ### Comparator
 
 The part of a test which compares the output to the desired output and determines if it is correct. For the most part, 281 uses **diff** to make sure that the output is exactly the same as their expected output.
-
-### Conditional Breakpoint
-
-
 
 ### Dataflow Analysis
 
@@ -69,6 +49,8 @@ Team of developers meet to examine existing code, following a process to underst
 Tests multiple components together.
 
 ### Measurement
+
+
 
 ### Mocking
 
